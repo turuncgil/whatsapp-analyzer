@@ -1,3 +1,4 @@
+*** To see additional text for DSSIPD, please see the end of READ.me file ***
 ## Introduction
 WhatsApp-Analyzer is a statistical analysis tool for WhatsApp chats. Working on the chat files that can be exported from WhatsApp it generates various plots showing, for example, which other participant a user responds to the most.
 
@@ -55,3 +56,49 @@ Run `python3 analyzer.py [file path] <start date> <end date>` in your terminal t
 - New line characters in messages are not a problem, before analyzing a message they are converted to whitespace.
 - The program could easily be adjusted to analyse other communication means than WhatsApp chats (e.g. emails). Either one brings the data in the earlier on discussed form, or one changes the way the program reads in the data (see the **Text** class in the **analyzer.py** file for this).
 
+# How to Run It / for DSSIPD class
+- As first step, go to [original repo](https://github.com/empicano/whatsapp-analyzer), and fork the repo
+![](img/fork.png)
+- Go to your account and find the repo you have forked, then copy HTTPS code
+![](img/clone-link.png)
+- Gitbash your repos folder (or where you like to locate the file), clone the repo with this code
+    git clone [link to your repo]
+- Open Anaconda and select the environment you like to work with and install dependencies with this codes
+    pip install numpy
+    pip install matplotlib
+- Export the whatsapp chat you like to analyse
+- Run the code with this command:
+    python3 analyzer.py [file path] <start date> <end date>
+## Problems on the way
+- Did not accepted python3 as a command, changed it to python
+- Did not read the file format of whatsapp chat, because whatsapp uses different export formats for different operation sytems and devices
+    -Used the examples from repo untill I get a result
+    -Then asked the whole group members for an export, turned out IOS has closer format to the example than Android
+    *** Format Example ***
+    ![](img/example-format.png)
+    *** Android Format ***
+    ![](img/android.format.png)
+    *** Android Format ***
+    ![](img/ios-format.png)
+    Modified the things by using **replace** tool on text editor to reach out to example
+- Run the code again had an error
+    *UnicodeDecodeError: 'charmap' codec can't decode byte X in position Y: character maps to <undefined>*
+    After researches, learned that spesifying decoder fixes this mistake, changed line 121 
+    from *with open(path) as chat:* to **with open(path, encoding="utf-8") as chat:**
+- And finally had another mistake which 
+    *ValueError: The number of FixedLocator locations (8), usually from a call to set_ticks, does not match the number of ticklabels (7)*
+    The error was on line 398, so I guessed there could be a mistake, 
+    ***ax.set_xticks(range(0, 24*8), minor=True)***
+    on previous line the code has 24*7 as values when I changed the code to 24*7 it worked.
+## Results
+----
+### Trend
+![](img/Trend-Result.png)
+### Activity
+![](img/Activity-Result.png)
+### Shares 
+![](img/Shares-Result.png)
+### Times
+![](img/Times-Result.png)
+### Network
+![](img/Network-Result.png)

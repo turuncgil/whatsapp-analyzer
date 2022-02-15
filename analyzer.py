@@ -118,7 +118,7 @@ class Text:
         members = []
         prev = None  # previous line in chat file
         predec = None  # author of previous message (predecessor)
-        with open(path) as chat:
+        with open(path, encoding="utf-8") as chat:
             for line in chat:
                 n = None
                 if (
@@ -395,7 +395,7 @@ def times(members):
     # set style attributes
     ax.grid(True)
     ticks = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-    plt.xticks(range(0, 24*8, 24), [s + ' ' + str(DAYSTART).zfill(2) + ':00' for s in ticks])
+    plt.xticks(range(0, 24*7, 24), [s + ' ' + str(DAYSTART).zfill(2) + ':00' for s in ticks])
     ax.set_xticks(range(0, 24*7), minor=True)
     plt.title('Hourly Message Count Mean (One Week)')
     plt.legend()
