@@ -87,7 +87,7 @@ Run `python3 analyzer.py [file path] <start date> <end date>` in your terminal t
     
     ![](img/android.format.png)
     
-    ***Android Format***
+    ***IOS Format***
     
     ![](img/ios-format.png)
     
