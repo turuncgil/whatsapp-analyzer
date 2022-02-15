@@ -83,11 +83,11 @@ Run `python3 analyzer.py [file path] <start date> <end date>` in your terminal t
     -Used the examples from repo untill I get a result
     -Then asked the whole group members for an export, turned out IOS has closer format to the example than Android
  
-    *** Android Format ***
+    ***Android Format***
     
     ![](img/android.format.png)
     
-    *** Android Format ***
+    ***Android Format***
     
     ![](img/ios-format.png)
     
