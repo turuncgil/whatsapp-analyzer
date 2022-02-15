@@ -62,10 +62,15 @@ Run `python3 analyzer.py [file path] <start date> <end date>` in your terminal t
 - Go to your account and find the repo you have forked, then copy HTTPS code
 ![](img/clone-link.png)
 - Gitbash your repos folder (or where you like to locate the file), clone the repo with this code
+    
     git clone [link to your repo]
+
 - Open Anaconda and select the environment you like to work with and install dependencies with this codes
+    
     pip install numpy
+    
     pip install matplotlib
+ 
 - Export the whatsapp chat you like to analyse
 - Run the code with this command:
     python3 analyzer.py [file path] <start date> <end date>
