@@ -103,7 +103,10 @@ Run `python3 analyzer.py [file path] <start date> <end date>` in your terminal t
     
     After researches, learned that spesifying decoder fixes this mistake, changed line 121 
     
-    from *with open(path) as chat:* to **with open(path, encoding="utf-8") as chat:**
+    from *with open(path) as chat:* to 
+     ```
+    **with open(path, encoding="utf-8") as chat:**
+     ```
 - And finally had another mistake which 
     
     *ValueError: The number of FixedLocator locations (8), usually from a call to set_ticks, does not match the number of ticklabels (7)*
