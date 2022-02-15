@@ -1,4 +1,4 @@
-*** To see additional text for DSSIPD, please see the end of READ.me file ***
+***To see additional text for DSSIPD, please see the end of READ.me file***
 ## Introduction
 WhatsApp-Analyzer is a statistical analysis tool for WhatsApp chats. Working on the chat files that can be exported from WhatsApp it generates various plots showing, for example, which other participant a user responds to the most.
 
