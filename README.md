@@ -66,16 +66,16 @@ Run `python3 analyzer.py [file path] <start date> <end date>` in your terminal t
     git clone [link to your repo]
 
 - Open Anaconda and select the environment you like to work with and install dependencies with this codes
-    
+     ```
     pip install numpy
     
     pip install matplotlib
- 
+     ```
 - Export the whatsapp chat you like to analyse
 - Run the code with this command:
-    
+     ```
     python3 analyzer.py [file path] <start date> <end date>
-
+     ```
 ## Problems on the way
 
 - Did not accepted python3 as a command, changed it to python
@@ -105,7 +105,7 @@ Run `python3 analyzer.py [file path] <start date> <end date>` in your terminal t
     
     from *with open(path) as chat:* to 
      ```
-    **with open(path, encoding="utf-8") as chat:**
+    with open(path, encoding="utf-8") as chat:
      ```
 - And finally had another mistake which 
     
