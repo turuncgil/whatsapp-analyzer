@@ -82,11 +82,7 @@ Run `python3 analyzer.py [file path] <start date> <end date>` in your terminal t
 - Did not read the file format of whatsapp chat, because whatsapp uses different export formats for different operation sytems and devices
     -Used the examples from repo untill I get a result
     -Then asked the whole group members for an export, turned out IOS has closer format to the example than Android
-    
-    *** Format Example ***
-    
-    ![](img/example-format.png)
-    
+ 
     *** Android Format ***
     
     ![](img/android.format.png)
@@ -98,19 +94,19 @@ Run `python3 analyzer.py [file path] <start date> <end date>` in your terminal t
     
     Modified the things by using **replace** tool on text editor to reach out to example
 - Run the code again had an error
-    
+     ```
     *UnicodeDecodeError: 'charmap' codec can't decode byte X in position Y: character maps to <undefined>*
-    
+     ```
     After researches, learned that spesifying decoder fixes this mistake, changed line 121 
     
     from *with open(path) as chat:* to 
-     ```
+     
     with open(path, encoding="utf-8") as chat:
-     ```
+     
 - And finally had another mistake which 
-    
+     
     *ValueError: The number of FixedLocator locations (8), usually from a call to set_ticks, does not match the number of ticklabels (7)*
-    
+     
     The error was on line 398, so I guessed there could be a mistake, 
    
     ***ax.set_xticks(range(0, 24 * 8), minor=True)***
