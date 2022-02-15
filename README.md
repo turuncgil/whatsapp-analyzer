@@ -110,9 +110,9 @@ Run `python3 analyzer.py [file path] <start date> <end date>` in your terminal t
     
     The error was on line 398, so I guessed there could be a mistake, 
    
-    ***ax.set_xticks(range(0, 24*8), minor=True)***
+    ***ax.set_xticks(range(0, 24 * 8), minor=True)***
     
-    on previous line the code has 24*7 as values when I changed the code to 24*7 it worked.
+    on previous line the code has 24 * 7 as values when I changed the code to 24 * 7 it worked.
 ## Results
 ### Trend
 ![](img/Trend-Result.png)
